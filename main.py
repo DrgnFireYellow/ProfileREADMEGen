@@ -1,7 +1,7 @@
 from github import Github
-import rich
 from rich.console import Console
 from rich.tree import Tree
+import os
 console = Console(width=100, record=True)
 username  = input("Please enter your github username: ")
 gh = Github()
@@ -56,4 +56,8 @@ for repo in userdata.get_repos():
     else:
         projecttree.add(repostring)
 console.print(roottree)
-console.save_html("README.md", inline_styles=True)
+try:
+    os.makedirs("output")
+except FileExistsError:
+    pass
+console.save_html("output/README.md", inline_styles=True)
