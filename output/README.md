@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
-<style>
 
-body {
-    color: #000000;
-    background-color: #ffffff;
-}
-</style>
 </head>
 <html>
 <body>

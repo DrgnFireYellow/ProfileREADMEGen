@@ -61,3 +61,17 @@ try:
 except FileExistsError:
     pass
 console.save_html("output/README.md", inline_styles=True)
+#fix output
+outputfileread = open("output/README.md")
+outputfilecontent = outputfileread.read()
+outputfileread.close()
+outputfilecontent = outputfilecontent.replace("""<style>
+
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>""", '')
+outputfile = open("output/README.md", mode='w')
+outputfile.write(outputfilecontent)
+outputfile.close()
