@@ -17,6 +17,8 @@
 │   │   ├── amplify-rental - None
 │   │   ├── Doodlebox - None
 │   │   └── drgnfireyellow.github.io - None
+│   ├── <span style="color: #c0c0c0; text-decoration-color: #c0c0c0; background-color: #000000">$</span><span style="color: #008000; text-decoration-color: #008000; background-color: #000000">_</span> Bash
+│   │   └── seedstore - None
 │   ├── amplify-hello-world - None
 │   ├── autocomplete - Fig adds autocomplete to your terminal.
 │   ├── Dragonmoji - None
@@ -29,7 +31,6 @@
 │   ├── playing-with-pygame - None
 │   ├── quickterminalhack - None
 │   ├── quickterminalhack-win - None
-│   ├── seedstore - None
 │   └── vscode-term - A recreation of vscode that runs in the terminal as a TUI.
 └── 📜 Certifications
     └── <a href="https://www.freecodecamp.org/certification/drgnfireyellow/responsive-web-design">Responsive Web Design Certification</a>

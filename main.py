@@ -13,6 +13,7 @@ javatreeexists = False
 htmltreeexists = False
 ctreeexists = False
 cpptreeexists = False
+bashtreeexists = False
 for repo in userdata.get_repos():
     if repo.language == 'Python':
         pythontreeexists = True
@@ -26,6 +27,8 @@ for repo in userdata.get_repos():
         ctreeexists = True
     if repo.language == 'C++':
         cpptreeexists = True
+    if repo.language == 'Shell':
+        bashtreeexists = True
 roottree = Tree(f":bust_in_silhouette: {username}")
 projecttree = roottree.add(":file_folder: projects")
 certificationtree = roottree.add(":scroll: Certifications")
@@ -41,6 +44,8 @@ if ctreeexists:
     ctree = projecttree.add("[white on blue]C[/white on blue] C")
 if cpptreeexists:
     cpptree = projecttree.add("[white on blue]C++[/white on blue] C++")
+if bashtreeexists:
+    bashtree = projecttree.add("[white on black]$[green]_[/green][/white on black] Bash")
 for repo in userdata.get_repos():
     repostring = f"{repo.name} - {repo.description}"
     if repo.language == 'Python':
@@ -55,6 +60,8 @@ for repo in userdata.get_repos():
         ctree.add(repostring)
     elif repo.language == 'C++':
         cpptree.add(repostring)
+    elif repo.language == 'Shell':
+        bashtree.add(repostring)
     else:
         projecttree.add(repostring)
 certifications = json.load(open("data/certifications.json"))
