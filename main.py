@@ -2,6 +2,7 @@ from github import Github
 from rich.console import Console
 from rich.tree import Tree
 import os
+import json
 console = Console(width=100, record=True)
 username  = input("Please enter your github username: ")
 gh = Github()
@@ -27,6 +28,7 @@ for repo in userdata.get_repos():
         cpptreeexists = True
 roottree = Tree(f":bust_in_silhouette: {username}")
 projecttree = roottree.add(":file_folder: projects")
+certificationtree = roottree.add(":scroll: Certifications")
 if pythontreeexists:
     pythontree = projecttree.add(":snake: Python")
 if jstreeexists:
@@ -55,6 +57,12 @@ for repo in userdata.get_repos():
         cpptree.add(repostring)
     else:
         projecttree.add(repostring)
+certifications = json.load(open("data/certifications.json"))
+for key in certifications:
+    if not certifications[key]['exp'] == 'none':
+        certificationtree.add(f"[link {certifications[key]['link']}]{key}[/link {certifications[key]['link']}] - expires on {certifications[key]['exp']}")
+    else:
+        certificationtree.add(f"[link {certifications[key]['link']}]{key}[/link {certifications[key]['link']}]")
 console.print(roottree)
 try:
     os.makedirs("output")
