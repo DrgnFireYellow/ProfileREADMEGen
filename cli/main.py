@@ -1,9 +1,11 @@
+import json
+import os
+import sys
+
 from github import Github
 from rich.console import Console
 from rich.tree import Tree
-import os
-import json
-import sys
+
 console = Console(width=100, record=True)
 try:
     username = sys.argv[1]
