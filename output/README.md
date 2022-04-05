@@ -20,7 +20,6 @@
 │   ├── <span style="color: #c0c0c0; text-decoration-color: #c0c0c0; background-color: #000000">$</span><span style="color: #008000; text-decoration-color: #008000; background-color: #000000">_</span> Bash
 │   │   └── seedstore - None
 │   ├── amplify-hello-world - None
-│   ├── autocomplete - Fig adds autocomplete to your terminal.
 │   ├── Dragonmoji - None
 │   ├── drgnfireyellow - None
 │   ├── FCC-Personal-Portfolio-Assets - None

@@ -3,8 +3,13 @@ from rich.console import Console
 from rich.tree import Tree
 import os
 import json
+import sys
 console = Console(width=100, record=True)
-username  = input("Please enter your github username: ")
+try:
+    username = sys.argv[1]
+except IndexError:
+    username  = input("Please enter your github username: ")
+
 gh = Github()
 userdata = gh.get_user(username)
 pythontreeexists = False
