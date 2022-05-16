@@ -2,3 +2,6 @@
 .venv
 .dccache
 output/README.md
+.venv
+.env
+venv
