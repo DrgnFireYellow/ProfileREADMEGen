@@ -1,2 +1,2 @@
 # ProfileREADMEGen
-## Generate READMEs for GitHub profiles
+Generate READMEs for GitHub profiles
